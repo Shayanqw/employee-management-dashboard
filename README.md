@@ -236,3 +236,20 @@ Backend (`backend/.env`):
 - Input sanitization + stronger validation on the API
 - Unit/integration tests (React Testing Library + Supertest)
 - CI pipeline (GitHub Actions) for build + lint + tests
+
+
+## Tests
+
+### Backend
+```bash
+cd backend
+npm test
+```
+
+### Frontend
+```bash
+cd frontend
+npm test
+```
+
+> Frontend tests run with CRA's Jest runner. In CI, tests run in non-interactive mode.
