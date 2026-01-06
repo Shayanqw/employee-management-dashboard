@@ -26,17 +26,16 @@ This repo is intentionally optimized to showcase practical front-end patterns:
 
 ```mermaid
 flowchart LR
-  U[User Browser] -->|HTTP| FE[React Frontend (port 3000)]
-  FE -->|Axios /api/*| API[Express REST API (port 5000)]
-  API -->|Mongoose| DB[(MongoDB (port 27017))]
-
   subgraph DC["Docker Compose (dev)"]
-    FE
-    API
-    DB
-    ME[Mongo Express (port 8084)]
+    FE["React Frontend :3000"]
+    API["Express REST API :5000"]
+    DB[(MongoDB :27017)]
+    ME["Mongo Express :8084"]
   end
 
+  U["User Browser"] -->|HTTP| FE
+  FE -->|Axios /api| API
+  API -->|Mongoose| DB
   ME --> DB
 ```
 
