@@ -6,6 +6,8 @@
  * we mock axios here.
  */
 
+import "@testing-library/jest-dom";
+
 // eslint-disable-next-line no-undef
 jest.mock("axios", () => {
   const mockHttp = {
